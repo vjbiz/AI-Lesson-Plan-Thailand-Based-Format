@@ -14,8 +14,13 @@ export interface ProcedureStep {
 }
 
 export interface LessonPlan {
+  subject: string;
   topic: string;
+  gradeLevel: string;
   strandStandards: string;
+  indicators: string[];
+  keyCompetencies: string[];
+  desiredCharacteristics: string[];
   objectives: string[];
   summary: string;
   vocabulary: string[];
@@ -29,7 +34,10 @@ export interface LessonPlan {
     wrapUp: ProcedureStep;
   };
   materials: string[];
-  evaluation: string;
+  assessment: string;
+  reflection: string;
+  teacherName: string;
+  departmentHeadName: string;
 }
 
 export type GradeLevel = 
